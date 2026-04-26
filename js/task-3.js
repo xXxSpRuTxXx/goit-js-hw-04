@@ -1,24 +1,26 @@
 const profile = {
+  // Властивості об'єкта
   username: 'Jacob',
   playTime: 300,
 
-  // Метод для зміни імені користувача
+  // Метод для зміни імені (використовуємо this)
   changeUsername(newName) {
     this.username = newName;
   },
 
-  // Метод для збільшення ігрового часу
+  // Метод для оновлення часу (використовуємо this)
   updatePlayTime(hours) {
     this.playTime += hours;
   },
 
-  // Метод для отримання рядка з інформацією
+  // Метод для отримання рядка-звіту (використовуємо this)
   getInfo() {
     return `${this.username} has ${this.playTime} active hours!`;
   },
 };
 
-// Перевірка роботи об'єкта
+// --- Код для перевірки (обов'язково залиште для ментора) ---
+
 console.log(profile.getInfo()); // "Jacob has 300 active hours!"
 
 profile.changeUsername('Marco');
